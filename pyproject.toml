@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clinic-frontdesk"
+version = "1.0.0"
+description = "Conflict-Free Clinic Front Desk & Appointment Operating System with Fair Cancellation Management"
+readme = "README.md"
+authors = [
+    { name = "Pranjal Jain", email = "pranjaljain0905@gmail.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "flask>=2.0.0",
+    "python-dateutil>=2.8.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
